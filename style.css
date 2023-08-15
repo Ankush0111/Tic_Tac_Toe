@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Source Code Pro', monospace;
+}
+/*nav bar*/
+nav{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(89, 173, 206);
+    font-size: 50px;
+}
+/*body*/
+.mid{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    height: 15vh;
+    width: auto;   
+}
+.box{
+    border: 1px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: skyblue;
+}
+.details{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    gap:30px;
+    margin-top:1px;
+}
+.button{
+    margin-top: -22px;
+}
+#reset{
+    height: 5vh;
+    width: 20vh;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+#reset:hover{
+    background-color: skyblue;
+}
+.text{
+    display: none;
+}
+/*utility classes*/
+.bt-0{
+    border-top: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 500px){
+    .mid{
+        flex-direction: column;
+    }
+    .board{
+        margin: auto;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+    .box{
+        font-size: 15vw;
+    }
+    .details{
+        margin-top: 150px;
+    }
+}
+@media screen and (max-width: 380px){
+    .details{
+        margin-top: 120px;
+    }
+    .board{
+        margin: auto;
+        grid-template-columns: repeat(3, 22vw);
+        grid-template-rows: repeat(3, 22vw);
+    }
+}
